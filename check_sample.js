@@ -13,10 +13,10 @@ const result = decide(spec.txs, spec.votes || {});
 const back = recover(result.decisions, spec.log || [], spec.votes || {});
 const out = render(spec);
 
-emit("裁决 =", JSON.stringify(result.decisions));
-emit("落盘的决策记录 =", JSON.stringify(result.logged));
-emit("恢复时的动作 =", JSON.stringify(back.actions));
-emit("未决事务 =", JSON.stringify(back.unresolved));
+emit("裁决 =", result.decisions);
+emit("落盘的决策记录 =", result.logged);
+emit("恢复时的动作 =", back.actions);
+emit("未决事务 =", back.unresolved);
 emit("重复恢复是否幂等 =", out.idempotent);
 emit("无法裁决的错误码 =", spec.unresolved_code);
 
