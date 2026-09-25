@@ -1,0 +1,19 @@
+{
+  "unresolved_code": "E_UNRESOLVED",
+  "crash_after": "vote",
+  "log": [
+    {"tx": "t0", "kind": "prepare"},
+    {"tx": "t1", "kind": "prepare"},
+    {"tx": "t1", "kind": "commit"}
+  ],
+  "txs": [
+    {"id": "t0", "participants": ["p0", "p1"]},
+    {"id": "t1", "participants": ["p0", "p1"]},
+    {"id": "t2", "participants": ["p0"]}
+  ],
+  "votes": {
+    "t0": {"p0": "yes", "p1": "no"},
+    "t1": {"p0": "yes", "p1": "yes"},
+    "t2": {"p0": "yes"}
+  }
+}
